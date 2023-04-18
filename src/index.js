@@ -1,6 +1,10 @@
+import PeTable from "./components/PeTable.vue";
+import ITableHeader from "./interfaces/ITable.ts";
+
 function install(Vue) {
 	if (install.installed) return;
 	install.installed = true;
+	Vue.component("pe-table", PeTable);
 }
 
 const plugin = {
@@ -16,3 +20,7 @@ if (typeof window !== "undefined") {
 if (GlobalVue) {
 	GlobalVue.use(plugin);
 }
+
+PeTable.install = install;
+
+export { PeTable, ITableHeader };

@@ -1,0 +1,54 @@
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr)
+}
+
+.card {
+    border: 1px solid black;
+    width: 90%;
+    margin-bottom: 10px;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td,
+th {
+    border-bottom: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+.table-footer,
+.table-header {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    font-size: 12px;
+}
+
+.right {
+    text-align: right;
+}
+
+.left {
+    text-align: left;
+}
+
+.arrow {
+    background-color: transparent;
+    border: 0.5px solid grey;
+    font-size: 15px;
+    border-radius: 6px;
+}
+
+.arrow:hover:enabled {
+    background-color: grey;
+}
