@@ -21,7 +21,7 @@ How to display data ?
 // Example: 
 
 <script setup lang="ts">
-    import {PeTable} from "tripilibrary";
+    import {PeTable} from "vue-pe-library";
 
     // Headers should have the following structure. 
     let headers = [ { title: 'Id', name: 'id' }, { title: 'Brand', name: 'brand' } ]
@@ -40,7 +40,7 @@ Table Pagination
 // Example: 
 
 <script setup lang="ts">
-    import {PeTable} from "tripilibrary";
+    import {PeTable} from "vue-pe-library";
 
     // Headers should have the following structure. 
     let headers = [ { title: 'Id', name: 'id' }, { title: 'Brand', name: 'brand' } ]
