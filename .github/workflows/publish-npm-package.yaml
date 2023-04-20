@@ -5,7 +5,8 @@ on:
       - main
 
 jobs:
-  build:
+  publish:
+    name: Publish NPM Package
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -17,8 +18,10 @@ jobs:
           registry-url: 'https://registry.npmjs.org'
       - name: Install dependencies ⬇️
         run: npm install
-      - name: Update Version 🆙
-        run: npm version patch
+      - name: Bump Package 🆙
+        uses: commitizen-tools/commitizen-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
       - name: Build package 🔧
         run: npm run build-lib
       - name: Publish package on NPM 📦
