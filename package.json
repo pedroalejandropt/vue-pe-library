@@ -16,6 +16,10 @@
     "*.json",
     "*.js"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pedroalejandropt/vue-pe-library.git"
+  },
   "dependencies": {
     "core-js": "^3.8.3",
     "vue": "^3.2.13",
