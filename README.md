@@ -91,7 +91,7 @@ Table or Grid
     <PeTable :headers="headers" :records="records" :multipleViews="true"/>
 </template>
 ```
-![alt text](https://github.com/pedroalejandropt/vue-pe-library/blob/main/assets/assets/changeViews.gif "Table Grid")
+![alt text](https://github.com/pedroalejandropt/vue-pe-library/blob/main/assets/changeViews.gif "Table Grid")
 
 Filter & Searching
 
@@ -111,4 +111,4 @@ Filter & Searching
     <PeTable :headers="headers" :records="records" :filter="true"/>
 </template>
 ```
-![alt text](https://github.com/pedroalejandropt/vue-pe-library/blob/main/assets/assets/filter.gif "Filter Searching")
+![alt text](https://github.com/pedroalejandropt/vue-pe-library/blob/main/assets/filter.gif "Filter Searching")
