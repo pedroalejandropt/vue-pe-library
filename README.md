@@ -71,7 +71,7 @@ Sorting Headers (Asc/Desc)
     <PeTable :headers="headers" :records="records" :order="true"/>
 </template>
 ```
-![alt text](https://github.com/pedroalejandropt/vue-pe-library/blob/main/assets/assets/order.gif "Sorting")
+![alt text](https://github.com/pedroalejandropt/vue-pe-library/blob/main/assets/order.gif "Sorting")
 
 Table or Grid
 
