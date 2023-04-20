@@ -18,10 +18,6 @@ jobs:
           registry-url: 'https://registry.npmjs.org'
       - name: Install dependencies ⬇️
         run: npm install
-      - name: Bump Package 🆙
-        uses: commitizen-tools/commitizen-action@master
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
       - name: Build package 🔧
         run: npm run build-lib
       - name: Publish package on NPM 📦
