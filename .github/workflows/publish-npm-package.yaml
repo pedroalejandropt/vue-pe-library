@@ -25,7 +25,7 @@ jobs:
 
       - name: Run Auto Semantic Version
         id: sematic-version-action
-        uses: pedroalejandropt/auto-semantic-version@v1
+        uses: pedroalejandropt/auto-semantic-version@v0.0.1
 
       - name: Update Version
         run: npm version ${{ steps.sematic-version-action.outputs.version }}
