@@ -28,7 +28,7 @@ jobs:
         uses: pedroalejandropt/auto-semantic-version@v0.0.1
 
       - name: Update Version
-        run: echo '{"version": ${{ steps.sematic-version-action.outputs.version }} }' > package.json
+        run: echo echo "{\"version\": \"${{ steps.sematic-version-action.outputs.version }}\"}" > package.json
         
       - name: Build package 🔧
         run: npm run build-lib
