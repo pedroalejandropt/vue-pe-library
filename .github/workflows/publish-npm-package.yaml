@@ -40,6 +40,8 @@ jobs:
         run: npm run build-lib
 
       - name: Create Tag
+        env:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
         run: |
           git push --tags
 
