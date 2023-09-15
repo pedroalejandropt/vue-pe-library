@@ -40,7 +40,8 @@ jobs:
         run: npm run build-lib
 
       - name: Create Tag
-        run: git tag "${{ steps.sematic-version-action.outputs.version }}"
+        run: |
+          git push --tags
 
       - name: Publish package on NPM 📦
         run: npm publish
