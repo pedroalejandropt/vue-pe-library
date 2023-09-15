@@ -9,17 +9,36 @@ jobs:
     name: Publish NPM Package
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout repository
         uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+          
       - name: Setup Node
         uses: actions/setup-node@v2
         with:
-          node-version: '14.x'
+          node-version: '18.x'
           registry-url: 'https://registry.npmjs.org'
+          
       - name: Install dependencies ⬇️
         run: npm install
+
+      - name: Run Auto Semantic Version
+        id: sematic-version-action
+        uses: pedroalejandropt/auto-semantic-version@v1
+
+      - name: Update Version
+        run: npm version ${{ steps.sematic-version-action.outputs.version }}
+        
       - name: Build package 🔧
         run: npm run build-lib
+
+      - name: Git Add, Commit & Create Tag
+        run: |
+          git add .
+          git commit -m "Update Version"
+          git tag "${{ steps.sematic-version-action.outputs.version }}"
+        
       - name: Publish package on NPM 📦
         run: npm publish
         env:
