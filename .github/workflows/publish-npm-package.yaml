@@ -33,13 +33,13 @@ jobs:
       - name: Build package 🔧
         run: npm run build-lib
 
+      - name: Publish package on NPM 📦
+        run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
       - name: Git Add, Commit & Create Tag
         run: |
           git add .
           git commit -m "Update Version"
           git tag "${{ steps.sematic-version-action.outputs.version }}"
-        
-      - name: Publish package on NPM 📦
-        run: npm publish
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
