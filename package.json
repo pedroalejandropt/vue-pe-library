@@ -1,6 +1,6 @@
 {
   "name": "vue-pe-library",
-  "version": "0.0.4",
+  "version": "0.0.7",
   "private": false,
   "scripts": {
     "serve": "vue-cli-service serve",
