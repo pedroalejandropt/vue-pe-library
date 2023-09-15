@@ -27,7 +27,7 @@ jobs:
         id: sematic-version-action
         uses: pedroalejandropt/auto-semantic-version@v0.0.1
       
-      - run : git config --global user.email "pedro.alejandro.pt@gmail.com"
+      - run : git stash
       
       - name: Update Version
         run: npm version "${{ steps.sematic-version-action.outputs.version }}"
