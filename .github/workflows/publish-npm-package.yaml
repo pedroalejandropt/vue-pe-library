@@ -27,7 +27,11 @@ jobs:
         id: sematic-version-action
         uses: pedroalejandropt/auto-semantic-version@v0.0.1
       
-      - run : git stash
+      - name: Set GitHub Account
+        run : |
+          git config --global user.email "pedro.alejandro.pt@gmail.com"
+          git config --global user.name "Pedro Alejandro Pacheco Tripi"
+          git stash
       
       - name: Update Version
         run: npm version "${{ steps.sematic-version-action.outputs.version }}"
